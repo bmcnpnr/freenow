@@ -1,0 +1,16 @@
+In order to start the app, please start the FreeNowServerApplicantTestApplication.java, or run "java -jar <created jar name>" inside the target folder.
+
+The web services are secured, and some require an ADMIN role. So, please use <username: "driver01", password: "driver01pw"> if you want to access all of the services.
+
+How to test the application:
+    -Please open the Swagger UI via this link: http://localhost:8080/swagger-ui.html
+    -You have to login in order to use the API. You can find it under authentication-controller
+    -After you login, the server will return you a JWToken. You need to login with it.
+    -Please click on a padlock symbol and type "Bearer <returned_token>" inside of it.
+        Example: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkcml2ZXIwMiIsInJvbGVzIjp7InBhcmFsbGVsIjpmYWxzZX0sImlhdCI6MTU2NDYwODY5OCwiZXhwIjoxNTY0Njk1MDk4fQ.atmv0fAeer58EUODdqBO2EKbWbZ7gYELdym22mHwn_w
+    -Now you can access to services according to the role of the user.
+    -You need a ADMIN user in order to create/delete resources(PUT and DELETE methods are ADMIN only).
+How to view the database console:
+    -Please open the H2 console via this link: http://localhost:8080/swagger-ui.html
+    -Type this for JDBC URL: jdbc:h2:mem:freenow
+    -username and password: freenow
